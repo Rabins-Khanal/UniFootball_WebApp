@@ -336,3 +336,24 @@ test('Clicking a news post redirects correctly', async ({ page }) => {
     await expect(page).toHaveURL(/.*\/post\/.*/);
 });
 
+test('Clicking the logo redirects to homepage', async ({ page }) => {
+    await page.goto(`${BASE_URL}/contact`);
+    await page.click('text=UniFootball'); // Assuming "UniFootball" is in the logo
+    await page.waitForURL(`${BASE_URL}`);
+    await expect(page).toHaveURL(`${BASE_URL}`);
+});
+
+test('Footer contains Privacy Policy and Terms links', async ({ page }) => {
+    await page.goto(`${BASE_URL}`);
+    await expect(page.locator('text=Privacy Policy')).toBeVisible();
+    await expect(page.locator('text=Terms & Conditions')).toBeVisible();
+});
+
+test('User sees error message for invalid search', async ({ page }) => {
+    await page.goto(`${BASE_URL}/search`);
+    await page.fill('input[type="text"]', 'RandomNonExistentPost');
+    await page.press('input[type="text"]', 'Enter');
+    await page.waitForSelector('text=No posts found.');
+    await expect(page.locator('text=No posts found.')).toBeVisible();
+});
+
