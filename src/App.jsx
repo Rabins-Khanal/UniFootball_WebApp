@@ -1,19 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
-import PrivateRoute from './components/PrivateRoute';
 import ScrollToTop from './components/ScrollToTop';
+import OnlyAdminPrivateRoute from './components/private/admin/OnlyAdminPrivateRoute';
+import Dashboard from './components/private/dashboard/Dashboard';
+import CreatePost from './components/private/posts/CreatePost';
+import PostPage from './components/private/posts/PostPage';
+import Search from './components/private/posts/Search';
+import UpdatePost from './components/private/posts/UpdatePost';
+import PrivateRoute from './components/private/user/PrivateRoute';
+import Footer from './components/public/Footer';
+import Header from './components/public/Header';
+import Home from './components/public/Home';
+import SignIn from './components/public/SignIn';
+import SignUp from './components/public/SignUp';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import CreatePost from './pages/CreatePost';
-import Dashboard from './pages/Dashboard';
-import Home from './pages/Home';
-import PostPage from './pages/PostPage';
-import Search from './pages/Search';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
-import UpdatePost from './pages/UpdatePost';
 
 export default function App() {
   return (

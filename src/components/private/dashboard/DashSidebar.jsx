@@ -1,17 +1,16 @@
 import { Sidebar } from 'flowbite-react';
+import { useEffect, useState } from 'react';
 import {
-  HiUser,
+  HiAnnotation,
   HiArrowSmRight,
+  HiChartPie,
   HiDocumentText,
   HiOutlineUserGroup,
-  HiAnnotation,
-  HiChartPie,
+  HiUser,
 } from 'react-icons/hi';
-import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import { signoutSuccess } from '../redux/user/userSlice';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { signoutSuccess } from '../../../redux/user/userSlice';
 
 export default function DashSidebar() {
   const location = useLocation();
@@ -73,7 +72,7 @@ export default function DashSidebar() {
                 icon={HiDocumentText}
                 as='div'
               >
-               News
+                News
               </Sidebar.Item>
             </Link>
           )}

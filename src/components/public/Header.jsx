@@ -4,8 +4,8 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { FaFutbol, FaMoon, FaSun } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { toggleTheme } from '../redux/theme/themeSlice';
-import { signoutSuccess } from '../redux/user/userSlice';
+import { toggleTheme } from '../../Theme/themeSlice';
+import { signoutSuccess } from '../../redux/user/userSlice';
 
 export default function Header() {
   const path = useLocation().pathname;

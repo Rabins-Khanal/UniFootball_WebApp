@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FaFutbol } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import PostCard from '../components/PostCard';
+import PostCard from '../private/posts/PostCard';
 
 export default function Home() {
   const [posts, setPosts] = useState([]);

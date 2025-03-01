@@ -1,27 +1,26 @@
-import { Alert, Button, Modal, ModalBody, TextInput } from 'flowbite-react';
-import { useEffect, useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
 import {
   getDownloadURL,
   getStorage,
   ref,
   uploadBytesResumable,
 } from 'firebase/storage';
-import { app } from '../firebase';
+import { Alert, Button, Modal, TextInput } from 'flowbite-react';
+import { useEffect, useRef, useState } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { HiOutlineExclamationCircle } from 'react-icons/hi';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { app } from '../../../firebase';
 import {
-  updateStart,
-  updateSuccess,
-  updateFailure,
+  deleteUserFailure,
   deleteUserStart,
   deleteUserSuccess,
-  deleteUserFailure,
   signoutSuccess,
-} from '../redux/user/userSlice';
-import { useDispatch } from 'react-redux';
-import { HiOutlineExclamationCircle } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+  updateFailure,
+  updateStart,
+  updateSuccess,
+} from '../../../redux/user/userSlice';
 
 export default function DashProfile() {
   const { currentUser, error, loading } = useSelector((state) => state.user);
@@ -193,9 +192,8 @@ export default function DashProfile() {
                   left: 0,
                 },
                 path: {
-                  stroke: `rgba(62, 152, 199, ${
-                    imageFileUploadProgress / 100
-                  })`,
+                  stroke: `rgba(62, 152, 199, ${imageFileUploadProgress / 100
+                    })`,
                 },
               }}
             />
@@ -203,11 +201,10 @@ export default function DashProfile() {
           <img
             src={imageFileUrl || currentUser.profilePicture}
             alt='user'
-            className={`rounded-full w-full h-full object-cover border-8 border-[lightgray] ${
-              imageFileUploadProgress &&
+            className={`rounded-full w-full h-full object-cover border-8 border-[lightgray] ${imageFileUploadProgress &&
               imageFileUploadProgress < 100 &&
               'opacity-60'
-            }`}
+              }`}
           />
         </div>
         {imageFileUploadError && (

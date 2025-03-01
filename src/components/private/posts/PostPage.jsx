@@ -1,8 +1,8 @@
 import { Spinner } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import CommentSection from '../components/CommentSection';
-import PostCard from '../components/PostCard';
+import CommentSection from '../comments/CommentSection';
+import PostCard from './PostCard';
 
 export default function NewsPage() {
   const { postSlug } = useParams();
