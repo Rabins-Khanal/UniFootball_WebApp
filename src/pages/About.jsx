@@ -11,7 +11,7 @@ export default function About() {
           </p>
 
           <p>
-            Our mission is to bring you accurate and timely news, match analysis, player updates, and transfer rumors—all in one place. We provide a community-driven space where football enthusiasts can discuss their favorite teams, share opinions, and stay up to date with the latest trends in the sport.
+            Our mission is and timely news, match analysis, player updates, and transfer rumors—all in one place. We provide a community-driven space where football enthusiasts can discuss their favorite teams, share opinions, and stay up to date with the latest trends in the sport.
           </p>
 
           <p>
