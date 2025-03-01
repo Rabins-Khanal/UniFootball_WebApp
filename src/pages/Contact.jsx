@@ -8,7 +8,7 @@ export default function Contact() {
                     Contact Us
                 </h1>
                 <p className='text-lg text-gray-400 mb-6'>
-                    Have questions or feedback? We'd love to hear from you! Reach out to us through any of the following channels.
+                    Have questions feedback? We'd love to hear from you! Reach out to us through any of the following channels.
                 </p>
 
                 <div className='text-lg text-gray-400 flex flex-col gap-6'>
