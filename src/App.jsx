@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './Theme/ScrollToTop';
 import OnlyAdminPrivateRoute from './components/private/admin/OnlyAdminPrivateRoute';
 import Dashboard from './components/private/dashboard/Dashboard';
 import CreatePost from './components/private/posts/CreatePost';
