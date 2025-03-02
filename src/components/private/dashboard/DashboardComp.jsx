@@ -1,12 +1,12 @@
+import { Button, Table } from 'flowbite-react';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import {
   HiAnnotation,
   HiArrowNarrowUp,
   HiDocumentText,
   HiOutlineUserGroup,
 } from 'react-icons/hi';
-import { Button, Table } from 'flowbite-react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 export default function DashboardComp() {
@@ -79,18 +79,7 @@ export default function DashboardComp() {
           </div>
           <div className='flex  gap-2 text-sm'>
             <span className='text-green-500 flex items-center'>
-              <HiArrowNarrowUp />
-              {lastMonthUsers}
-            </span>
-            <div className='text-gray-500'>Last month</div>
-          </div>
-        </div>
-        <div className='flex flex-col p-3 dark:bg-slate-800 gap-4 md:w-72 w-full rounded-md shadow-md'>
-          <div className='flex justify-between'>
-            <div className=''>
-              <h3 className='text-gray-500 text-md uppercase'>
-                Total Comments
-              </h3>
+             
               <p className='text-2xl'>{totalComments}</p>
             </div>
             <HiAnnotation className='bg-indigo-600  text-white rounded-full text-5xl p-3 shadow-lg' />
@@ -207,6 +196,6 @@ export default function DashboardComp() {
           </Table>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
